@@ -1,15 +1,18 @@
-# What is mongo-express?
+# What is rpi-mongo-express?
 
-mongo-express is a web-based MongoDB admin interface written in Node.js, Express.js, and Bootstrap3.
+rpi-mongo-express is a web-based MongoDB admin interface written in Node.js, Express.js, and Bootstrap3 for Raspberry Pi.
 
-> [github.com/mongo-express/mongo-express](https://github.com/mongo-express/mongo-express)
+> [github.com/ind3x/rpi-mongo-express-docker](https://github.com/ind3x/rpi-mongo-express-docker)
 
-![logo](https://raw.githubusercontent.com/mongo-express/mongo-express-docker/master/logo.png)
+> Forked from [github.com/mongo-express/mongo-express](https://github.com/mongo-express/mongo-express)
+
+
+![logo](https://raw.githubusercontent.com/ind3x/rpi-mongo-express-docker/master/logo.png)
 
 # How to use this image
 
 ```console
-$ docker run --link some_mongo_container:mongo -p 8081:8081 mongo-express
+$ docker run --link some_mongo_container:mongo -p 8081:8081 ind3x/rpi-mongo-express
 ```
 
 Then you can hit `http://localhost:8081` or `http://host-ip:8081` in your browser.
@@ -62,3 +65,5 @@ The following are only needed if `ME_CONFIG_MONGODB_ENABLE_ADMIN` is **"false"**
 		mongo-express
 
 This example links to a container name typical of `docker-compose`, changes the editor's color theme, and enables basic authentication.
+
+*NOTE*: Tested in Raspberry Pi 2

@@ -66,4 +66,4 @@ The following are only needed if `ME_CONFIG_MONGODB_ENABLE_ADMIN` is **"false"**
 
 This example links to a container name typical of `docker-compose`, changes the editor's color theme, and enables basic authentication.
 
-*NOTE*: Tested in Raspberry Pi 2
+*NOTE*: Tested on Raspberry Pi 2

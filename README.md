@@ -2,9 +2,9 @@
 
 rpi-mongo-express is a web-based MongoDB admin interface written in Node.js, Express.js, and Bootstrap3 for Raspberry Pi.
 
-> [github.com/ind3x/rpi-mongo-express-docker](https://github.com/ind3x/rpi-mongo-express-docker)
+> Forked from [github.com/mongo-express/mongo-express-docker](https://github.com/mongo-express/mongo-express-docker)
 
-> Forked from [github.com/mongo-express/mongo-express](https://github.com/mongo-express/mongo-express)
+> [github.com/mongo-express/mongo-express](https://github.com/mongo-express/mongo-express)
 
 
 ![logo](https://raw.githubusercontent.com/ind3x/rpi-mongo-express-docker/master/logo.png)

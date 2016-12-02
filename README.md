@@ -62,7 +62,7 @@ The following are only needed if `ME_CONFIG_MONGODB_ENABLE_ADMIN` is **"false"**
 		-e ME_CONFIG_OPTIONS_EDITORTHEME="ambiance" \
 		-e ME_CONFIG_BASICAUTH_USERNAME="user" \
 		-e ME_CONFIG_BASICAUTH_PASSWORD="fairly long password" \
-		mongo-express
+		ind3x/rpi-mongo-express
 
 This example links to a container name typical of `docker-compose`, changes the editor's color theme, and enables basic authentication.
 

@@ -14,7 +14,7 @@ RUN set -x \
 	&& gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini \
 	&& rm -r /usr/local/bin/tini.asc \
 	&& chmod +x /usr/local/bin/tini \
-	&& tini -h \
+	&& /usr/local/bin/tini -h \
 	&& apt-get purge --auto-remove -y ca-certificates curl \
 	&& rm -rf /var/lib/apt/lists/*
 
@@ -49,4 +49,4 @@ RUN set -x \
 
 RUN npm run build
 
-CMD ["tini", "--", "npm", "start"]
+CMD ["/usr/local/bin/tini", "--", "npm", "start"]

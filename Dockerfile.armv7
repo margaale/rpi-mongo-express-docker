@@ -11,12 +11,9 @@ ENV ME_CONFIG_EDITORTHEME="default" \
     ME_CONFIG_BASICAUTH_PASSWORD="" \
     VCAP_APP_HOST="0.0.0.0"
 
-ENV MONGO_EXPRESS 0.54.0
-
 # Create app directory
 WORKDIR /usr/src/app
 
-RUN npm install -g mongo-express@$MONGO_EXPRESS
-
+RUN npm install -g mongo-express
 
 CMD [ "mongo-express" ]

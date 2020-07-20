@@ -1,4 +1,4 @@
-FROM hypriot/rpi-node:6.9-slim
+FROM hypriot/rpi-node:8.1.3-slim
 
 # grab tini for signal processing and zombie killing
 ENV TINI_VERSION 0.13.0

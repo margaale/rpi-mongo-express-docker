@@ -13,10 +13,10 @@ ENV ME_CONFIG_EDITORTHEME="default" \
 
 ENV MONGO_EXPRESS 0.54.0
 
-RUN npm install mongo-express@$MONGO_EXPRESS
+# Create app directory
+WORKDIR /usr/src/app
 
-WORKDIR /node_modules/mongo-express
+RUN npm install -g mongo-express@$MONGO_EXPRESS
 
-RUN cp config.default.js config.js
 
-CMD ["tini", "--", "node", "app"]
+CMD [ "mongo-express" ]

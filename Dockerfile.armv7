@@ -1,0 +1,22 @@
+FROM arm32v7/node:lts-alpine
+COPY qemu-arm-static /usr/bin/
+
+EXPOSE 8081
+
+# override some config defaults with values that will work better for docker
+ENV ME_CONFIG_EDITORTHEME="default" \
+    ME_CONFIG_MONGODB_SERVER="mongo" \
+    ME_CONFIG_MONGODB_ENABLE_ADMIN="true" \
+    ME_CONFIG_BASICAUTH_USERNAME="" \
+    ME_CONFIG_BASICAUTH_PASSWORD="" \
+    VCAP_APP_HOST="0.0.0.0"
+
+ENV MONGO_EXPRESS 0.54.0
+
+RUN npm install mongo-express@$MONGO_EXPRESS
+
+WORKDIR /node_modules/mongo-express
+
+RUN cp config.default.js config.js
+
+CMD ["tini", "--", "node", "app"]

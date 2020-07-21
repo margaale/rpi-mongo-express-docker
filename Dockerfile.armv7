@@ -1,4 +1,4 @@
-FROM arm32v7/node:12-slim
+FROM arm32v7/node:14-slim
 COPY qemu-arm-static /usr/bin/
 
 # grab tini for signal processing and zombie killing
